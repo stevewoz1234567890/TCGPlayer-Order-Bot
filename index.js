@@ -34,7 +34,7 @@ function find_browser(lok_file) {
 }
 
 process.stdout.write("\n---------------------------------------------------\n"); 
-process.stdout.write("Purplemana 2022:  TCGPlayer Bot 0.1\n"); 
+process.stdout.write("Purplemana 2022:  TCGPlayer Order Bot 0.1\n"); 
 process.stdout.write("---------------------------------------------------\n");
 
 process.stdout.write("\n----Arguments-------");
@@ -103,7 +103,7 @@ var server = app.listen(8081, function () {
 
     browser_ws = find_browser(browser_lok_file)
     
-    console.log("Purplemana TCGPlayer Bot listening at http://%s:%s", host, port)
+    console.log("Purplemana TCGPlayer Order Bot listening at http://%s:%s", host, port)
 })
 
 // wrap main function in async

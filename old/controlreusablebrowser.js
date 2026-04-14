@@ -51,7 +51,7 @@ var server = app.listen(8081, function () {
     var host = server.address().address
     var port = server.address().port
     
-    console.log("Purplemana TCGPlayer Bot listening at http://%s:%s", host, port)
+    console.log("Purplemana TCGPlayer Order Bot listening at http://%s:%s", host, port)
 })
 
     // define paths
@@ -59,7 +59,7 @@ const downloadPath = path.resolve('./download');
 const inventoryDownloadPath = path.resolve('./inventory/export')
 const queuePath = path.resolve('G:\\Shared drives\\TCGPlayer Axiom\\inventory\\queue')
 const inventoryPath = path.resolve('G:/Shared drives/TCGPlayer Axiom/inventory/export')
-const imageTempDownloadPath = path.resolve('C:\\Users\\ankur\\Documents\\GitHub\\tcgplayer_bot\\image_temp')
+const imageTempDownloadPath = path.resolve('C:\\Users\\ankur\\Documents\\GitHub\\tcgplayer-order-bot\\image_temp')
 
 
 

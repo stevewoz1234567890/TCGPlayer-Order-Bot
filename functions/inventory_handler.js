@@ -8,7 +8,7 @@ const download = require('image-downloader');
 const inventoryDownloadPath = path.resolve('./inventory/export')
 const inventoryPath = path.resolve('G:/Shared drives/TCGPlayer Axiom/inventory/export')
 const queuePath = path.resolve('G:\\Shared drives\\TCGPlayer Axiom\\inventory\\queue')
-const imageTempDownloadPath = path.resolve('C:\\Users\\ankur\\Documents\\GitHub\\tcgplayer_bot\\image_temp')
+const imageTempDownloadPath = path.resolve('C:\\Users\\ankur\\Documents\\GitHub\\tcgplayer-order-bot\\image_temp')
 
 
 // helper functions
