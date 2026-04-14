@@ -84,7 +84,7 @@ async function importInventory(browser_ws, session_path)
     });
   
     
-    process.stdout.write("Importing inventory from Purplemana ...")
+    process.stdout.write("Importing inventory ...")
     const import_file_path = 'G:\\Shared drives\\TCGPlayer Axiom\\inventory\\import\\import.csv'
     
     const page = await browser.newPage()

@@ -39,11 +39,11 @@ app.get('/tcgplayer/queue_inventory', function (req, res) {
 });
 
 
-// Load import.csv to TCGPlayer (output inventory from Purplemana)
+// Load import.csv to TCGPlayer (CSV inventory export)
 app.get('/tcgplayer/import_inventory', function (req, res) {
-    console.log("Importing inventory from Purplemana ...");
+    console.log("Importing inventory ...");
     importInventory()
-    res.send('Importing inventory from Purplemana ...');
+    res.send('Importing inventory ...');
 });
 
 
@@ -51,7 +51,7 @@ var server = app.listen(8081, function () {
     var host = server.address().address
     var port = server.address().port
     
-    console.log("Purplemana TCGPlayer Order Bot listening at http://%s:%s", host, port)
+    console.log("TCGPlayer Order Bot listening at http://%s:%s", host, port)
 })
 
     // define paths
@@ -63,9 +63,9 @@ const imageTempDownloadPath = path.resolve('C:\\Users\\ankur\\Documents\\GitHub\
 
 
 
-// define login and password
-const tcgplayer_login = 'tcgplayer@purplemana.com'
-const tcgplayer_password = 'Purplemana#1'
+// define login and password (set TCGPLAYER_EMAIL / TCGPLAYER_PASSWORD in the environment)
+const tcgplayer_login = process.env.TCGPLAYER_EMAIL || ''
+const tcgplayer_password = process.env.TCGPLAYER_PASSWORD || ''
 
 // define xpaths to clickable elements
 const tcgplayer_login_url = 'https://store.tcgplayer.com/oauth/login?returnUrl=/admin/account/logon'
@@ -345,7 +345,7 @@ async function importInventory()
          ]     
     });
     
-    process.stdout.write("Importing inventory from Purplemana ...")
+    process.stdout.write("Importing inventory ...")
     const import_file_path = 'G:\\Shared drives\\TCGPlayer Axiom\\inventory\\import\\import.csv'
     
     const page = await browser.newPage()
